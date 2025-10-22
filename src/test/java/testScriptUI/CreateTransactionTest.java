@@ -21,11 +21,11 @@ public class CreateTransactionTest extends BaseUiTest {
 	@Test
 	@Severity(SeverityLevel.CRITICAL)
 	@Parameters({"Username","Email", "AccountType"})
-	public void createTransactionTest(String username, String EmailId, String AccountType)
+	public void createTransactionTest(String userid, String recipientId, String amount)
 	{
 		try {
 			transaction = new createTransaction(driver);
-			transaction.CreateTransaction(username, EmailId, AccountType);
+			transaction.CreateTransaction(userid, recipientId, amount);
 			Allure.addAttachment("Transaction is sucessfull", "Passed");
 		}
 		catch(Exception e)

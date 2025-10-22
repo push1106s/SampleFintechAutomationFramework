@@ -35,10 +35,10 @@ WebDriver driver;
     WebElement createTransactionButton;
     
     
-    public void CreateTransaction(String userId, String recepienetId, String amount)
+    public void CreateTransaction(String userId, String recipientId, String amount)
     {
     	useridField.sendKeys(userId);
-    	recipientidField.sendKeys(recepienetId);
+    	recipientidField.sendKeys(recipientId);
     	amountField.sendKeys(amount);
     	createTransactionButton.click();
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		

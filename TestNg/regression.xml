@@ -1,2 +1,15 @@
-<suite name = "test">
+<suite name = "FintecAppTestcases">
+
+<test name="UserRegistration">
+<parameter name= "Username" value = "Testuser1"/>
+<parameter name= "Email" value = "Testuser1"/>
+<parameter name ="AccountType" value ="Premium"/>
+<parameter name= "userid" value = "123"/>
+<parameter name= "recipientId" value = "456"/>
+<parameter name ="amount" value ="100.50"/>
+    <classes>
+      <class name="testScriptUI.UserRegistrationTest"/>
+       <class name="testScriptUI.CreateTransactionTest"/>
+    </classes>
+  </test>
 </suite>
