@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FintecAppTestcasesAPI]" verbose="0">
+  <test thread-count="5" name="ApiUserCreation(failed)" verbose="0">
+    <parameter name="accountType" value="premium"/>
+    <parameter name="name" value="John Doe"/>
+    <parameter name="email" value="john@example.com"/>
+    <classes>
+      <class name="testScriptAPI.CreateUser">
+        <methods>
+          <include name="testCreateUser" invocation-numbers="0"/>
+          <include name="preTestSetup"/>
+        </methods>
+      </class> <!-- testScriptAPI.CreateUser -->
+    </classes>
+  </test> <!-- ApiUserCreation(failed) -->
+</suite> <!-- Failed suite [FintecAppTestcasesAPI] -->

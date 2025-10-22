@@ -1,0 +1,19 @@
+<suite name = "FintecAppTestcasesAPI">
+
+<test name="ApiUserCreation">
+<parameter name= "name" value = "John Doe"/>
+<parameter name= "email" value = "john@example.com"/>
+<parameter name ="accountType" value ="premium"/>
+<parameter name ="updatedemail" value ="updated@example.com"/>
+    <classes>
+      <class name="testScriptAPI.UserCreationApi.java"/>
+     
+    </classes>
+  </test>
+  
+  <test name="ApiTransactionCreation">
+    <classes>
+      <class name ="testScriptAPI.TransactionCreationApi.java"/>
+    </classes>
+  </test>
+</suite>

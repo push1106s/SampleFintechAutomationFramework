@@ -1,0 +1,20 @@
+{
+
+        "createTransaction": [{
+          "userId": "123",
+          "amount": 100.50,
+          "type": "transfer",
+		  "recipientId": "456"
+        }],
+        "TC002": [{
+          "URL_": "https://www.facebook.com",
+          "status_": 200,
+          "Response_String_": "Facebook"
+        }],
+        "TC003": [{
+          "URL_": "https://www.yahoo.com",
+          "status_": 200,
+          "Response_String_": "Yahoo"
+        }]
+
+}
