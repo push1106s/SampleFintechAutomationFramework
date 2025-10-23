@@ -67,8 +67,10 @@
         <version>3.5.2</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>TestNg/apismoke.xml</suiteXmlFile>
+          <!-- Need to pass testng.xml files as argument from command line -->
+          <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
           </suiteXmlFiles>
+
           <testFailureIgnore>true</testFailureIgnore>
         </configuration>
       </plugin>

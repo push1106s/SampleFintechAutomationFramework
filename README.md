@@ -36,10 +36,13 @@ basedevurl=https://your-dev-url.com
 baseprodurl=https://your-prod-url.com
 
 4.Run Tests
-a) To run UI tests:
-mvn test -Dtest=UserRegistrationTest
+a) To run UI tests(for single test suite):
+mvn test -DtestsuiteXmlFiles=TestNg/smoke.xml 
 
-b) To run API tests:
+b) To run UI tests(to run multiple suite):
+mvn test -DtestsuiteXmlFiles=TestNg/smoke.xml,TestNg/regression.xml 
+
+c) To run API tests:
 mvn test -Dtest=UserCreationApiTest
 
 📈 Reporting
