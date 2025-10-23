@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import base.BaseUiTest;
 
@@ -47,6 +48,10 @@ public class UserRegistrationPage extends BaseUiTest {
 	/** Button to submit the registration form */
 	@FindBy(xpath = "//input[@id='accountType']" )
 	private WebElement createUserButton;
+	
+	/** Success message for user registration */
+	@FindBy(xpath = "//label[text()='User registration is sucessfull'" )
+	private WebElement sucessMessage;
 
 
 	/**
@@ -62,6 +67,7 @@ public class UserRegistrationPage extends BaseUiTest {
 		emailField.sendKeys(emailId);
 		AccountTypeField.sendKeys(AccountType);
 		createUserButton.click();
+		Assert.assertTrue(sucessMessage.isDisplayed());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
 	}
 

@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import base.BaseUiTest;
 
@@ -49,6 +50,10 @@ public class CreateTransactionPage extends BaseUiTest {
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement createTransactionButton;
     
+    /** Success message for user Transaction */
+	@FindBy(xpath = "//label[text()='Transaction is sucessfull'" )
+	private WebElement sucessMessage;
+    
     /**
      * Method to perform transaction creation by filling out the form and submitting it.
      *
@@ -62,6 +67,7 @@ public class CreateTransactionPage extends BaseUiTest {
     	recipientidField.sendKeys(recipientId);
     	amountField.sendKeys(amount);
     	createTransactionButton.click();
+    	Assert.assertTrue(sucessMessage.isDisplayed());
     	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));		
     }
     

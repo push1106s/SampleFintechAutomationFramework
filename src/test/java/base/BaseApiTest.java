@@ -10,6 +10,7 @@ public class BaseApiTest {
 
 	public static Utils utObj;
 	public static Payload payload;
+	public static String token = null;
 
 	/**
 	 * This method is annotated with @BeforeSuite, which means it will be executed
@@ -31,6 +32,7 @@ public class BaseApiTest {
 		 * The URI is fetched from a global configuration using the utility method.
 		 */
 		RestAssured.baseURI = utObj.readGlobalData("baseapiurl");
+		token = utObj.readGlobalData("token");
 
 		/**
 		 * Initialize the Payload object.

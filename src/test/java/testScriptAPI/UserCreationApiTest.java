@@ -43,10 +43,10 @@ public class UserCreationApiTest extends BaseApiTest {
 	public void testCreateUser(String name, String email, String accountType) {
 
 		String requestBody = payload.createUserPayload(name, email, accountType);
-
+		
 		Map<String, String> headers = new HashMap<>();
 		headers.put("Content-Type", "application/json");               
-		headers.put("x-api-key", "reqres-free-v1");
+		headers.put("token", token);
 
 		try
 		{
@@ -97,7 +97,7 @@ public class UserCreationApiTest extends BaseApiTest {
 
 		Map<String, String> headers = new HashMap<>();
 		headers.put("Content-Type", "application/json");               // specify request format
-		headers.put("x-api-key", "reqres-free-v1");
+		headers.put("token", token);
 		try {
 			Response response =  given()
 					.headers(headers)
@@ -132,7 +132,7 @@ public class UserCreationApiTest extends BaseApiTest {
 
 		Map<String, String> headers = new HashMap<>();
 		headers.put("Content-Type", "application/json");               // specify request format
-		headers.put("x-api-key", "reqres-free-v1");
+		headers.put("token", token);
 
 		try {
 			Response response =  given()
@@ -173,7 +173,7 @@ public class UserCreationApiTest extends BaseApiTest {
 		// POST request to create user
 		Map<String, String> headers = new HashMap<>();
 		headers.put("Content-Type", "application/json");               // specify request format
-		headers.put("x-api-key", "reqres-invalidKey");
+		headers.put("token", token);
 
 		try
 		{
@@ -233,7 +233,7 @@ public class UserCreationApiTest extends BaseApiTest {
 		// POST request to create user
 		Map<String, String> headers = new HashMap<>();
 		headers.put("Content-Type", "application/json");               // specify request format
-		headers.put("x-api-key", "reqres-free-v1");
+		headers.put("token", token);
 
 		try
 		{
