@@ -35,7 +35,7 @@ public class TransactionCreationApiTest extends BaseApiTest {
 	 * Asserts that the returned userId and amount match the input, and that a valid transaction ID is returned.
 	 * Attaches result to Allure report.
 	 */
-	@Test
+	@Test(priority= 1)
 	@Severity(SeverityLevel.CRITICAL)
 	public void testTransactionCreation() {
 
@@ -93,7 +93,7 @@ public class TransactionCreationApiTest extends BaseApiTest {
 	 * Sends a GET request to /transactions/{id} endpoint and validates the response.
 	 * Logs the response and attaches result to Allure report.
 	 */
-	@Test
+	@Test(priority= 2)
 	@Severity(SeverityLevel.NORMAL)
 	public void testGetUserTransaction()
 	{
