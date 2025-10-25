@@ -37,7 +37,7 @@ public class UserCreationApiTest extends BaseApiTest {
 	 * @param email the email address of the user
 	 * @param accountType the type of account to be created
 	 */
-	@Test
+	@Test(priority= 1)
 	@Severity(SeverityLevel.CRITICAL)
 	@Parameters({"name","email","accountType"})
 	public void testCreateUser(String name, String email, String accountType) {
@@ -90,7 +90,7 @@ public class UserCreationApiTest extends BaseApiTest {
 	 * Test method to retrieve user details using stored user ID.
 	 * Sends a GET request and validates the response.
 	 */
-	@Test
+	@Test(priority= 2)
 	@Severity(SeverityLevel.NORMAL)
 	public void testGetUser()
 	{
@@ -123,7 +123,7 @@ public class UserCreationApiTest extends BaseApiTest {
 	 *
 	 * @param updatedemail the new email address to update
 	 */
-	@Test
+	@Test(priority= 3)
 	@Severity(SeverityLevel.NORMAL)
 	@Parameters ({"updatedemail"})
 	public void testUpdateUser(String updatedemail)
@@ -162,7 +162,7 @@ public class UserCreationApiTest extends BaseApiTest {
 	 * @param email the email address of the user
 	 * @param accountType the type of account to be created
 	 */
-	@Test
+	@Test(priority= 4)
 	@Severity(SeverityLevel.NORMAL)
 	public void testUnauthorizedCreateUser(String name, String email, String accountType) {
 
@@ -221,7 +221,7 @@ public class UserCreationApiTest extends BaseApiTest {
 	 * @param email the email address of the user
 	 * @param accountType the type of account to be created
 	 */
-	@Test
+	@Test(priority= 5)
 	@Severity(SeverityLevel.NORMAL)
 	public void testInvalidPage(String name, String email, String accountType) {
 
